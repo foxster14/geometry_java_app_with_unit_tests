@@ -1,5 +1,5 @@
- //This library gives access to pi & exponents
-import java.util.Scanner;
+import java.lang.Math;
+import java.util.Scanner;  //This library gives access to pi & exponents
 
 //This class needs to be public so our main class can access it
 public class Cylinder {
@@ -30,14 +30,21 @@ public class Cylinder {
     public static void main(String[] args) {
 
         Scanner reader = new Scanner(System.in);
-        System.out.println("\nPlease enter the radius: ");
-        int radius = int(input("\nPlease enter the radius: "))
-        int height = int(input("Please enter the height: "))   
+        System.out.print("\nPlease enter the radius: ");
+        int radius = reader.nextInt(); 
+        System.out.print("Please enter the height: ");
+        int height = reader.nextInt(); 
 
-    print("The surface area of a cylinder =", round(surfaceArea(radius, height), 2))
-    print("The volume of a cylinder =", round(volume(radius, height), 2))
-    print("The lateral surface area of a cylinder =", round(lateral(radius, height), 2))
-    print("The top OR bottom surface area of a cylinder =", round(base(radius), 2))
+        //double actualSurfArea = (surfaceArea(radius, height));
+
+        //The %.2f formats the double to be rounded off after 2 decimal places
+        System.out.printf("\nThe surface area of a cylinder = %.2f", (surfaceArea(radius, height)));
+        System.out.printf("\nThe volume of a cylinder = %.2f", (volume(radius, height)));
+        System.out.printf("\nThe lateral surface area of a cylinder = %.2f", (lateralSurfaceArea(radius, height)));
+        System.out.printf("\nThe top OR bottom surface area of a cylinder = %.2f", (baseSurfaceArea(radius)));
+    
+        //Always good coding practice to close the reader object
+        reader.close();
     }
 
 }
