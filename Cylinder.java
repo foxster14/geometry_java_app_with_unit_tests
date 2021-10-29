@@ -1,5 +1,5 @@
-import java.lang.Math;
-import java.util.Scanner;  //This library gives access to pi & exponents
+import java.lang.Math;  //This library is included by default typically and gives access to special arithmetic functions like pi & exponents
+import java.util.Scanner;  //This library allows user input to be read from the terminal
 
 //This class needs to be public so our main class can access it
 public class Cylinder {
@@ -27,7 +27,7 @@ public class Cylinder {
         return base;
     }
 
-    public static void main(String[] args) {
+    public static void prompt() {
 
         Scanner reader = new Scanner(System.in);
         System.out.print("\nPlease enter the radius: ");
@@ -41,10 +41,11 @@ public class Cylinder {
         System.out.printf("\nThe surface area of a cylinder = %.2f", (surfaceArea(radius, height)));
         System.out.printf("\nThe volume of a cylinder = %.2f", (volume(radius, height)));
         System.out.printf("\nThe lateral surface area of a cylinder = %.2f", (lateralSurfaceArea(radius, height)));
-        System.out.printf("\nThe top OR bottom surface area of a cylinder = %.2f", (baseSurfaceArea(radius)));
+        System.out.printf("\nThe top OR bottom surface area of a cylinder = %.2f\n", (baseSurfaceArea(radius)));
     
-        //Always good coding practice to close the reader object
-        reader.close();
+        
     }
 
+    //Always good coding practice to close the reader object
+    // reader.close();
 }
