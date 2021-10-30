@@ -3,6 +3,11 @@ import java.lang.System;
 
 public class Geometry {
 
+    public static void header(String name) {
+        String line = "-"; 
+        System.out.println(line.repeat(55) + "\nPYTHON PROGRAM TO FIND" + name + "\n" + line.repeat(55));
+    }
+
     //put the main menu in a separate method & call it multiple times 
     public static void main(String[] args){
         Scanner reader = new Scanner(System.in);
@@ -24,15 +29,18 @@ public class Geometry {
             }
 
             else if (userInput == 1){
+                header("VOLUME & SURFACE AREA OF CYLINDER");
                 Cylinder.prompt();
             }
             
             else if (userInput == 2){
+                header("VOLUME & SURFACE AREA OF SPHERE");
                 Sphere.prompt();
             }
             
             else if (userInput == 3){
-
+                header("VOLUME & SURFACE AREA OF CONE");
+                Cone.prompt();
             }
             else {
                 System.out.println("Invalid selection, please try again.");

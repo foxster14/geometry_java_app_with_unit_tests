@@ -20,7 +20,7 @@ public class Sphere {
         int radius1 = reader.nextInt(); 
         
         System.out.printf("\nThe Surface area of a Sphere = %.2f", surfaceArea(radius1));
-        System.out.printf("\nThe Volume of a Sphere = %.2f", volumeCalc(radius1),"\n");
+        System.out.printf("\nThe Volume of a Sphere = %.2f\n", volumeCalc(radius1));
     }
     
 }
