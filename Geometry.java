@@ -5,7 +5,7 @@ public class Geometry {
 
     public static void header(String name) {
         String line = "-"; 
-        System.out.println(line.repeat(55) + "\nPYTHON PROGRAM TO FIND" + name + "\n" + line.repeat(55));
+        System.out.println(line.repeat(55) + "\nPYTHON PROGRAM TO FIND " + name + "\n" + line.repeat(55));
     }
 
     //put the main menu in a separate method & call it multiple times 
@@ -29,17 +29,17 @@ public class Geometry {
             }
 
             else if (userInput == 1){
-                header("VOLUME & SURFACE AREA OF CYLINDER");
+                header("GEOMETRIC CALCULATIONS OF A CYLINDER");
                 Cylinder.prompt();
             }
             
             else if (userInput == 2){
-                header("VOLUME & SURFACE AREA OF SPHERE");
+                header("GEOMETRIC CALCULATIONS OF A SPHERE");
                 Sphere.prompt();
             }
             
             else if (userInput == 3){
-                header("VOLUME & SURFACE AREA OF CONE");
+                header("GEOMETRIC CALCULATIONS OF A CONE");
                 Cone.prompt();
             }
             else {

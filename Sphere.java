@@ -15,7 +15,7 @@ public class Sphere {
 
     public static void prompt(){
 
-        Scanner reader = new Scanner(System.in);
+        Scanner reader = new Scanner(System.in); //The reader object is never closed, but the program doesn't run if it's closed within the Sphere Class
         System.out.print("\nPlease enter the radius: ");
         int radius1 = reader.nextInt(); 
         
